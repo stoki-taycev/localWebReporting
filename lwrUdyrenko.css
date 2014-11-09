@@ -1,0 +1,23 @@
+body {
+	background-color: grey;
+}
+
+#calendar {
+	width: 210px;
+	margin: 20px 5px 0px 25px;
+	border: 1px solid orange;
+	background-color: white;
+	box-shadow: 0px 0px 3px orange;
+}
+
+#datepicker {
+	width: 225px;
+	margin: 20px 5px 0px 25px;
+	border: 1px solid orange;
+	background-color: white;
+	box-shadow: 0px 0px 3px orange;
+}
+
+h2 {
+	margin: 5px 5px 5px 25px;
+}

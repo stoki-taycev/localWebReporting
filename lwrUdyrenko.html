@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Local Web Reporting - Udyrenko</title>
+    <script type="text/javascript" src="lwreport.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <link href="lwrUdyrenko.css" type="text/css" rel="stylesheet">
+  </head>
+
+  <body>
+    <h2>Pure JS, based on Table</h2>
+    <div id="calendar">Calendar</div>
+    <br />
+    <h2>jQuery Datepicker</h2>
+    <div id="datepicker">Calendar</div>
+
+<script type="text/javascript">
+  var cal = new Calendar();
+  cal.generateHTML();
+  document.getElementById("calendar").innerHTML = cal.getHTML();
+
+  $(function() {
+     $( "#datepicker" ).datepicker({
+       inline: true,  
+       showOtherMonths: true,  
+       dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+     });
+   });
+</script>
+  </body>
+</html>
