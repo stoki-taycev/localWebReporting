@@ -65,5 +65,4 @@ window.onload = function calendar(){
 		}
 	}
 	showDateCells();
-
 };
