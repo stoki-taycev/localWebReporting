@@ -51,8 +51,8 @@ window.onload = function calendar(){
 	// Show Date Cells
 	var cellsCounter = 1;
 	var showDateCells = function(){
-		for (var i = 1; i < daysInThisMonth + firstWeekDay; i++){
-			if (i >= firstWeekDay){
+		for (var i = 1; i <= 42; i++){
+			if (i >= firstWeekDay && i < daysInThisMonth + firstWeekDay){
 				var div = createDiv("cellname");
 				var dateCellNode = document.createTextNode(cellsCounter);
 				div.appendChild(dateCellNode);
