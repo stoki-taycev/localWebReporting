@@ -36,6 +36,7 @@ body {
 	box-shadow: 0px 0px 3px orange;
 	font-variant: small-caps;
 	color: #3C3C3C;
+	vertical-align: top;
 }
 
 #planner {
@@ -45,6 +46,7 @@ body {
 	border: 1px solid orange;
 	background-color: #FAFAFA;
 	box-shadow: 0px 0px 3px orange;
+	vertical-align: top;
 }
 
 .monthname {
