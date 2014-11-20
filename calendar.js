@@ -6,6 +6,7 @@ window.onload = function calendar(){
 	var currentDate = new Date();
 	var month = currentDate.getMonth();
 	var year = currentDate.getFullYear();
+	var today = currentDate.getDate();
 
 	var firstOfThisMonth = new Date(year, month, 1);
 	var firstWeekDay = firstOfThisMonth.getDay();
@@ -53,13 +54,23 @@ window.onload = function calendar(){
 	var showDateCells = function(){
 		for (var i = 1; i <= 42; i++){
 			if (i >= firstWeekDay && i < daysInThisMonth + firstWeekDay){
-				var div = createDiv("cellname");
-				var dateCellNode = document.createTextNode(cellsCounter);
-				div.appendChild(dateCellNode);
-				calendarDiv.appendChild(div);
-				cellsCounter += 1
+				if (i === today + firstWeekDay - 1){
+					var div = createDiv("todaycell");
+					div.setAttribute("id", cellsCounter + "of" + monthsLabels[month]);
+					var dateCellNode = document.createTextNode(cellsCounter);
+					div.appendChild(dateCellNode);
+					calendarDiv.appendChild(div);
+					cellsCounter += 1
+				} else {
+					var div = createDiv("cellname");
+					div.setAttribute("id", cellsCounter + "of" + monthsLabels[month]);
+					var dateCellNode = document.createTextNode(cellsCounter);
+					div.appendChild(dateCellNode);
+					calendarDiv.appendChild(div);
+					cellsCounter += 1
+				}
 			} else {
-				var div = createDiv("cellname");
+				var div = createDiv("emptycell");
 				calendarDiv.appendChild(div);
 			}
 		}
